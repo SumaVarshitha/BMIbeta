@@ -19,7 +19,7 @@ pipeline {
             steps{
                 //   withCredentials([string(credentialsId: 'azure')]){
                 // sh 'az extension add --name azure-devops'
-                sh 'cat /home/ec2-user/token.txt | az devops login --organization https://dev.azure.com/vickysastryvs/'
+                sh 'sudo cat /home/ec2-user/token.txt | az devops login --organization https://dev.azure.com/vickysastryvs/'
                 sh 'az devops project create --name vicky --organization https://dev.azure.com/vickysastryvs'
             }
         }     
