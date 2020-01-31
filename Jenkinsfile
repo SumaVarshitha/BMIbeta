@@ -18,10 +18,11 @@ pipeline {
         stage('azure'){
             steps{
                 //   withCredentials([string(credentialsId: 'azure')]){
-                // sh 'az extension add --name azure-devops'
+                 sh 'az extension add --name azure-devops'
                // sh 'curl -u vickysastry.vs@outlook.com:zsxapkj3zwk6rtz7zm4tyli7ayk7yt5yehp5ic7erlec4xsf7tya --request POST https://dev.azure.com/vickysastryvs/_apis/projects?api-version=5.1'
                // sh 'az devops project create --name vicky --organization https://dev.azure.com/vickysastryvs'
-                sh 'az login --allow-no-subscriptions'
+                //sh 'az login --allow-no-subscriptions'
+                sh ' az login -u vickysastry.vs@outlook.com -p Vickysurya1@ --allow-no-subscriptions'
                 sh 'az devops project list --organization https://dev.azure.com/vickysastryvs'
                 
             }
