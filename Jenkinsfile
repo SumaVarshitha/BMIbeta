@@ -2,8 +2,9 @@ pipeline {
     libraries{
      lib 'shlib'
 }
-    /*agent any
-    tools {
+    agent any
+    stages{
+    /*tools {
         maven "Maven"   
     } */  
   /*  environment{
