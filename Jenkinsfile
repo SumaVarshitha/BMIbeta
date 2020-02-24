@@ -46,13 +46,13 @@ pipeline {
                 fff()
             }
         }
-        stage('deleteteam')
+        /*stage('deleteteam')
         {
             steps
             {
                 delete_team()
             }
-        }
+        }*/
       /*  stage('azurecollector')
         {
             steps
