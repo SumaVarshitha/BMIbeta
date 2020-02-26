@@ -43,7 +43,7 @@ pipeline {
         {
             steps
             {
-                fff()
+                azclirepo()
             }
         }
         /*stage('deleteteam')
