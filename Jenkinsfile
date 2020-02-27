@@ -4,7 +4,7 @@ pipeline {
 }
     agent any
     stages{
-        /*stage('createrepo')
+        stage('createrepo')
         {
             steps
             {
@@ -25,13 +25,20 @@ pipeline {
                 cliworkitemcreate()
             }
         }
-        stage('wi_details')
+        stage('fetchiteration')
+        {
+            steps
+            {
+                clifetchiteration()
+            }
+        }
+        /*stage('wi_details')
         {
             steps
             {
                 cliwidetails()
             }
-        }
+        }*/
         stage('createpipeline')
         {
             steps
@@ -45,14 +52,8 @@ pipeline {
             {
                 clilistpipelines()
             }
-        }*/
-        stage('fetchiteration')
-        {
-            steps
-            {
-                clifetchiteration()
-            }
         }
+        
     }
 }
     /*tools {
