@@ -4,7 +4,7 @@ pipeline {
 }
     agent any
     stages{
-        stage('createrepo')
+        /*stage('createrepo')
         {
             steps
             {
@@ -44,6 +44,13 @@ pipeline {
             steps
             {
                 clilistpipelines()
+            }
+        }*/
+        stage('fetchiteration')
+        {
+            steps
+            {
+                clifetchiteration()
             }
         }
     }
