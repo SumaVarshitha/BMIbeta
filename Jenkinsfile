@@ -4,7 +4,7 @@ pipeline {
 }
     agent any
     stages{
-        stage('createrepo')
+       /* stage('createrepo')
         {
             steps
             {
@@ -31,7 +31,7 @@ pipeline {
             {
                 cliwidetails()
             }
-        }
+        }*/
         stage('createpipeline')
         {
             steps
@@ -39,13 +39,13 @@ pipeline {
                 clipipelinecreate()
             }
         }
-        stage('fetchpipelines')
+        /*stage('fetchpipelines')
         {
             steps
             {
                 clilistpipelines()
             }
-        }
+        }*/
     }
 }
     /*tools {
