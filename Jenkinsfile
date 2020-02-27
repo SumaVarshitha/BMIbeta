@@ -4,6 +4,50 @@ pipeline {
 }
     agent any
     stages{
+        stage('createrepo')
+        {
+            steps
+            {
+                clirepocreate()
+            }
+        }
+        stage('fetchrepo')
+        {
+            steps
+            {
+                clifetchrepos()
+            }
+        }
+        stage('createworkitem')
+        {
+            steps
+            {
+                cliworkitemcreate()
+            }
+        }
+        stage('wi_details')
+        {
+            steps
+            {
+                cliwidetails()
+            }
+        }
+        stage('createpipeline')
+        {
+            steps
+            {
+                clipipelinecreate()
+            }
+        }
+        stage('fetchpipelines')
+        {
+            steps
+            {
+                clilistpipelines()
+            }
+        }
+    }
+}
     /*tools {
         maven "Maven"   
     } */  
@@ -39,13 +83,7 @@ pipeline {
            '''
         }
     }*/
-        stage('azureconnector')
-        {
-            steps
-            {
-                azclirepo()
-            }
-        }
+        
         /*stage('deleteteam')
         {
             steps
@@ -179,6 +217,6 @@ pipeline {
                     slackSend (color: '#FF0000', message: " JOB FAILED: Job '${JOB_NAME} [${BUILD_NUMBER}]' (${BUILD_URL})")
                 }
                */
-    }
+   /* }
 
-}
+}*/
