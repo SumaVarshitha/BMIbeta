@@ -11,7 +11,7 @@ pipeline {
                 clirepocreate()
             }
         }
-        stage('fetchrepo')
+      /*  stage('fetchrepo')
         {
             steps
             {
@@ -38,7 +38,7 @@ pipeline {
             {
                 cliwidetails()
             }
-        }*/
+        }
         stage('createpipeline')
         {
             steps
@@ -52,7 +52,7 @@ pipeline {
             {
                 clilistpipelines()
             }
-        }
+        } */
         
     }
 }
