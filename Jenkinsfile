@@ -8,7 +8,7 @@ pipeline {
         {
             steps
             {
-                clirepocreate()
+                clirepocreate(JSON)
             }
         }
       /*  stage('fetchrepo')
