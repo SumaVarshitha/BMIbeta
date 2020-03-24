@@ -8,8 +8,10 @@ pipeline {
         {
             steps
             {
-                clirepocreate(jsondata)
+                //clirepocreate(jsondata)
+                pushcode(jsondata)
             }
+            
         }
       /*  stage('fetchrepo')
         {
