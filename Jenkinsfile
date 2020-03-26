@@ -8,8 +8,8 @@ pipeline {
         {
             steps
             {
-                clirepocreate(jsondata)
-                //pushcode()
+                //clirepocreate(jsondata)
+                pushcode()
             }
             
         }
