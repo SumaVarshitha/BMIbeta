@@ -9,7 +9,7 @@ pipeline {
             steps
             {
                 //clirepocreate(jsondata)
-                pushcode()
+                pushcode(jsondata)
             }
             
         }
