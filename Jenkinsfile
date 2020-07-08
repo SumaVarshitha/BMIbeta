@@ -12,7 +12,7 @@ pipeline {
 		   agent {
 			   docker { image 'sumavarshitha/java-maven-node' }}
 		steps {
-			//sh 'rm -rf BMIbeta' 
+			sh 'rm -rf BMIbeta' 
 	        sh 'git clone https://github.com/SumaVarshitha/BMIbeta.git'
                 sh "mvn clean package"
             
